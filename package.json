@@ -1,0 +1,33 @@
+{
+  "name": "jazzon-import",
+  "version": "1.0.0",
+  "description": "Plugin for jazzon to import other files",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/**/*.js",
+    "posttest": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tornqvist/jazzon-import.git"
+  },
+  "keywords": [
+    "jazzon",
+    "import",
+    "partial"
+  ],
+  "author": "Carl Törnqvist <calle.tornqvist@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tornqvist/jazzon-import/issues"
+  },
+  "homepage": "https://github.com/tornqvist/jazzon-import#readme",
+  "dependencies": {
+    "jazzon": "^0.1.0",
+    "mz": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.5.0",
+    "tape": "^4.2.0"
+  }
+}
