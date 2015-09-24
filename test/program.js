@@ -10,7 +10,7 @@ let deepPartial = require('./fixtures/deepPartial.json');
 
 test('partial is included', assert => {
   let instance = jazzon.create();
-  let json = { foo: '${ import(fixtures/partial.json) }' };
+  let json = { foo: '@{ import(fixtures/partial.json) }' };
   let expected = {
     [Object.keys(partial)[0]]: partial
   };
@@ -26,7 +26,7 @@ test('partial is included', assert => {
 
 test('partial is included recursively', assert => {
   let instance = jazzon.create();
-  let json = { foo: '${ import(fixtures/deepPartial.json) }' };
+  let json = { foo: '@{ import(fixtures/deepPartial.json) }' };
   let expected = {
     [Object.keys(json)[0]]: {
       [Object.keys(deepPartial)[0]]: partial

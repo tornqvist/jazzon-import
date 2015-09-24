@@ -1,7 +1,7 @@
 'use strict';
 
 let fs = require('mz/fs');
-let path = require('path');
+let resolve = require('path').resolve;
 
 function plugin(options) {
   options = (options || {});
@@ -13,10 +13,10 @@ function plugin(options) {
   return function (value, name, args) {
     switch (name) {
     case 'import':
-      let file = path.resolve(options.from, args[0]);
+      let file = resolve(options.from, args[0]);
       return fs.readFile(file, 'utf-8').then(JSON.parse);
     default:
-      return Promise.resolve(value);
+      return value;
     }
   };
 }

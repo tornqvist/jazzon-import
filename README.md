@@ -9,7 +9,7 @@ The plugin requires option `from` to know where to look for files.
 ```javascript
 let jazzon = require('jazzon');
 let importer = require('jazzon-import');
-let json = { foo: '${ import(foo.json) }'};
+let json = { foo: '@{ import(foo.json) }' };
 
 jazzon
   .use(importer({ from: __dirname }))
